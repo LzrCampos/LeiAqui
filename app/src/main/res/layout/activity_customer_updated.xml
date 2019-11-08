@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="15dp"
-    android:paddingEnd="15dp"
-    tools:context=".Customer.CustomerRegisterActivity">
+    tools:context=".Customer.CustomerUpdatedActivity">
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tvUpdateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome"
@@ -17,123 +15,113 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etUpdateName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateName" />
 
     <TextView
-        android:id="@+id/tvEmail"
+        android:id="@+id/tvUpdateEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateName" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etUpdateEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateEmail" />
 
     <TextView
-        android:id="@+id/tvCpf"
+        android:id="@+id/tvUpdateCpf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CPF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateEmail" />
 
     <EditText
-        android:id="@+id/etCpf"
+        android:id="@+id/etUpdateCpf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCpf" />
 
     <TextView
-        android:id="@+id/tvCellphone"
+        android:id="@+id/tvUpdateCellphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Celular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateCpf" />
 
     <EditText
-        android:id="@+id/etCellphone"
+        android:id="@+id/etUpdateCellphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCellphone" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCellphone" />
 
     <TextView
-        android:id="@+id/tvAddress"
+        android:id="@+id/tvUpdateAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Endereço"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCellphone" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateCellphone" />
 
     <EditText
-        android:id="@+id/etAddress"
+        android:id="@+id/etUpdateAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateAddress" />
 
     <TextView
-        android:id="@+id/tvBirthday"
+        android:id="@+id/tvUpdateBirthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nascimento"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateAddress" />
 
     <EditText
-        android:id="@+id/etBirthday"
+        android:id="@+id/etUpdateBirthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBirthday" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateBirthday" />
 
     <TextView
-        android:id="@+id/tvCode"
+        android:id="@+id/tvUpdateCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Categoria de leitor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBirthday" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateBirthday" />
 
     <EditText
-        android:id="@+id/etCode"
+        android:id="@+id/etUpdateCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCode" />
-
-    <Button
-        android:id="@+id/btnRegisterCustomer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#FFF"
-        android:text="Cadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/etCode" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCode" />
 </androidx.constraintlayout.widget.ConstraintLayout>

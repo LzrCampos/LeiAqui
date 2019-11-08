@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login.SignInActivity"></activity>
+        <activity android:name=".Customer.CustomerUpdatedActivity"></activity>
+        <activity android:name=".Login.SignInActivity" />
         <activity android:name=".Login.SignUpActivity" />
         <activity
             android:name=".SplashscreenActivity"

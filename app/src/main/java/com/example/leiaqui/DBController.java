@@ -88,6 +88,7 @@ public class DBController {
         values.put("EMAIL", customer.getEmail());
         values.put("CPF", customer.getCpf());
         values.put("ADDRESS", customer.getAddress());
+        values.put("BIRTHDAY", customer.getAddress());
         values.put("CELLPHONE", customer.getBirthday());
         values.put("CODE", customer.getCode());
         resultado = db.insert("CUSTOMER", null, values);
@@ -118,5 +119,26 @@ public class DBController {
         }
         db.close();
         return listCustomer;
+    }
+
+    public CustomerModel findCustomerById(int id) {
+        Cursor cursor;
+        //String sql = "SELECT * FROM CUSTOMER";
+        CustomerModel customer = new CustomerModel();
+        db = createDB.getReadableDatabase();
+        cursor = db.query("CUSTOMER", new String[]{"ID", "NAME", "EMAIL", "CPF", "ADDRESS", "CELLPHONE", "BIRTHDAY", "CODE"}, "ID="+id, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            customer.setId(cursor.getInt(0));
+            customer.setName(cursor.getString(1));
+            customer.setEmail(cursor.getString(2));
+            customer.setCpf(cursor.getString(3));
+            customer.setAddress(cursor.getString(4));
+            customer.setCellphone(cursor.getString(5));
+            customer.setBirthday(cursor.getString(6));
+            customer.setCode(cursor.getInt(7));
+        }
+        db.close();
+        return customer;
     }
 }
