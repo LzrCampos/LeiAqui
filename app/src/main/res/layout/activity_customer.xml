@@ -10,9 +10,21 @@
         android:id="@+id/btnNewCustomer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Novo Cliente"
         android:background="@color/colorPrimaryDark"
+        android:text="Novo Cliente"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listViewCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNewCustomer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

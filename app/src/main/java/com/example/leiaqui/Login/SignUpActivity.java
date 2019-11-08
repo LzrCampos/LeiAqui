@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.leiaqui.DBController;
 import com.example.leiaqui.R;
-import com.example.leiaqui.SplashscreenActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -37,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 String result;
 
-                result = dbController.insertData(User, Password);
+                result = dbController.insertUser(User, Password);
                 Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
 
                 showSignInActivity();

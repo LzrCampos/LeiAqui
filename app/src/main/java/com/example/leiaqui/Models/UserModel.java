@@ -1,4 +1,4 @@
-package com.example.leiaqui.Login;
+package com.example.leiaqui.Models;
 
 public class UserModel {
 

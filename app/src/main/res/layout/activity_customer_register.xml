@@ -8,97 +8,131 @@
     android:paddingEnd="15dp"
     tools:context=".Customer.CustomerRegisterActivity">
 
-<TextView
-    android:id="@+id/tvName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Nome"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<EditText
-    android:id="@+id/etName"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:layout_marginBottom="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvName" />
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-<TextView
-    android:id="@+id/tvEmail"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Email"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/etName" />
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
-<EditText
-    android:id="@+id/etEmail"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:layout_marginBottom="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-<TextView
-    android:id="@+id/tvCpf"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="CPF"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+    <TextView
+        android:id="@+id/tvCpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
-<EditText
-    android:id="@+id/etCpf"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:layout_marginBottom="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
+    <EditText
+        android:id="@+id/etCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
 
-<TextView
-    android:id="@+id/tvCellphone"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Celular"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/etCpf" />
+    <TextView
+        android:id="@+id/tvCellphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
 
-<EditText
-    android:id="@+id/etCellphone"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:layout_marginBottom="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvCellphone" />
+    <EditText
+        android:id="@+id/etCellphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCellphone" />
 
-<TextView
-    android:id="@+id/tvAddress"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Endereço"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/etCellphone" />
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCellphone" />
 
-<EditText
-    android:id="@+id/etAddress"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:layout_marginBottom="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
 
-<Button
-    android:id="@+id/button"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
-    android:text="Cadastrar"
-    android:background="@color/colorPrimaryDark"
-    app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+    <TextView
+        android:id="@+id/tvBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nascimento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBirthday" />
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria de leitor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBirthday" />
+
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCode" />
+
+    <Button
+        android:id="@+id/btnRegisterCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/etCode" />
 </androidx.constraintlayout.widget.ConstraintLayout>
