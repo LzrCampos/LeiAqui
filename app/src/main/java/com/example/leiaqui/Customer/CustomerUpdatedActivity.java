@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.leiaqui.DBController;
+import com.example.leiaqui.DAO.CustomerDAO;
 import com.example.leiaqui.Models.CustomerModel;
 import com.example.leiaqui.R;
 
@@ -22,9 +21,9 @@ public class CustomerUpdatedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_updated);
 
-        final DBController db = new DBController(getBaseContext());
+        final CustomerDAO db = new CustomerDAO(getBaseContext());
 
-        String id = this.getIntent().getStringExtra("customerModel");
+        final String id = this.getIntent().getStringExtra("customerModel");
 
         customer = db.findCustomerById(Integer.parseInt(id));
 
@@ -55,7 +54,7 @@ public class CustomerUpdatedActivity extends AppCompatActivity {
         btnUpdatedCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBController dbController = new DBController(getBaseContext());
+                CustomerDAO customerDAO = new CustomerDAO(getBaseContext());
                 CustomerModel customer = new CustomerModel();
 
                 customer.setName(etUpdateName.getText().toString());
@@ -67,8 +66,20 @@ public class CustomerUpdatedActivity extends AppCompatActivity {
                 customer.setCode(Integer.parseInt(etUpdateCode.getText().toString()));
 
                 String result;
-                result = dbController.insertCustomer(customer);
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                result = customerDAO.updatedCustomer(customer, id);
+                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+
+                finish();
+            }
+        });
+
+        btnDeleteCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomerDAO customerDAO = new CustomerDAO(getBaseContext());
+
+                String result = customerDAO.deleteCustomerById(id);
+                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
                 finish();
             }

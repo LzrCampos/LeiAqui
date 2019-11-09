@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.leiaqui.Book.BookActivity;
 import com.example.leiaqui.Customer.CustomerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,12 +19,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnCustomer = (Button)findViewById(R.id.btnCustomer);
+        Button btnBook = (Button)findViewById(R.id.btnBook);
 
         btnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "oi", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, CustomerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BookActivity.class);
                 startActivity(intent);
             }
         });

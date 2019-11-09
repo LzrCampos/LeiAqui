@@ -1,4 +1,4 @@
-package com.example.leiaqui;
+package com.example.leiaqui.DAO;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

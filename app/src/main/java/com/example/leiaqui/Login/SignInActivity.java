@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.leiaqui.DBController;
+import com.example.leiaqui.DAO.CustomerDAO;
+import com.example.leiaqui.DAO.UserDAO;
 import com.example.leiaqui.MainActivity;
 import com.example.leiaqui.R;
 
@@ -32,7 +33,7 @@ public class SignInActivity extends AppCompatActivity {
                 String user = etUser.getText().toString();
                 String password = etPassword.getText().toString();
 
-                DBController crud = new DBController(getBaseContext());
+                UserDAO crud = new UserDAO(getBaseContext());
                 Boolean verifyUser = crud.verifyUserCredentials(user, password);
                 if (verifyUser) {
                     Intent intent = new Intent(SignInActivity.this, MainActivity.class);

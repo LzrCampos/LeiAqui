@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Libraries"
+        android:text="Livraria"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         android:gravity="bottom|center"
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alexandrina"
+        android:text="LeiAqui"
         android:textColor="@color/colorPrimary"
         android:textSize="40sp"
         android:gravity="top|center"

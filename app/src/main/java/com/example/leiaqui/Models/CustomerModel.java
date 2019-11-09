@@ -79,7 +79,7 @@ public class CustomerModel {
 
     @Override
     public String toString(){
-        return this.Name;
+        return this.Name + "            " + this.Email;
     }
 
 }

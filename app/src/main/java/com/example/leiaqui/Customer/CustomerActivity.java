@@ -4,19 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.leiaqui.DBController;
+import com.example.leiaqui.DAO.CustomerDAO;
 import com.example.leiaqui.Models.CustomerModel;
 import com.example.leiaqui.R;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerActivity extends AppCompatActivity {
@@ -39,7 +36,7 @@ public class CustomerActivity extends AppCompatActivity {
             }
         });
 
-        final DBController db = new DBController(getBaseContext());
+        final CustomerDAO db = new CustomerDAO(getBaseContext());
 
         list = (ListView) findViewById(R.id.listViewCustomer);
         customerList = db.findAllCustomer();
@@ -55,7 +52,6 @@ public class CustomerActivity extends AppCompatActivity {
                 String x = String.valueOf(customerModel.getId());
                 intent.putExtra("customerModel", x);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -63,7 +59,7 @@ public class CustomerActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        DBController db = new DBController(getBaseContext());
+        CustomerDAO db = new CustomerDAO(getBaseContext());
         customerList.clear();
         list.invalidateViews();
 

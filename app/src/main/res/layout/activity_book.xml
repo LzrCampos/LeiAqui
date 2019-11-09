@@ -6,28 +6,28 @@
     android:layout_height="match_parent"
     android:paddingStart="5dp"
     android:paddingEnd="5dp"
-    tools:context=".Customer.CustomerActivity">
+    tools:context=".Book.BookActivity">
 
     <Button
-        android:id="@+id/btnNewCustomer"
+        android:id="@+id/btnNewBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@color/colorPrimary"
         android:textColor="#FFFFFF"
-        android:text="Novo Cliente"
+        android:text="Novo livro"
         android:textFontWeight="8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewCustomer"
+        android:id="@+id/listViewBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNewCustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNewBook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

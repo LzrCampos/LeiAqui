@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.leiaqui.DBController;
+import com.example.leiaqui.DAO.CustomerDAO;
+import com.example.leiaqui.DAO.UserDAO;
 import com.example.leiaqui.R;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBController dbController = new DBController(getBaseContext());
+                UserDAO userDAO = new UserDAO(getBaseContext());
 
                 EditText etUser = (EditText)findViewById(R.id.etUser);
                 EditText etPassword = (EditText)findViewById(R.id.etPassword);
@@ -34,21 +35,16 @@ public class SignUpActivity extends AppCompatActivity {
                 String Password = etPassword.getText().toString();
                 String ConfirmPassword = etConfirmPassword.getText().toString();
 
-                String result;
-
-                result = dbController.insertUser(User, Password);
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
-
-                showSignInActivity();
+                if(Password.equals(ConfirmPassword)){
+                    String result  = userDAO.insertUser(User, Password);
+                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "A senha e a confirmação devem ser iguais", Toast.LENGTH_LONG).show();
+                    etPassword.setText("");
+                    etConfirmPassword.setText("");
+                }
             }
         });
-    }
-
-    private void showSignInActivity() {
-        Intent intent = new Intent(
-                SignUpActivity.this, SignInActivity.class
-        );
-        startActivity(intent);
-        finish();
     }
 }

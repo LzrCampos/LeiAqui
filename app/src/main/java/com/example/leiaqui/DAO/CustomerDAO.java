@@ -1,81 +1,23 @@
-package com.example.leiaqui;
+package com.example.leiaqui.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.example.leiaqui.Models.CustomerModel;
 import com.example.leiaqui.Models.UserModel;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
-public class DBController {
+public class CustomerDAO {
     private SQLiteDatabase db;
     private CreateDatabase createDB;
 
-    public DBController(Context context) {
+    public CustomerDAO(Context context) {
         createDB = new CreateDatabase(context);
     }
-
-    /**
-     * User methods
-     */
-    public String insertUser(String user, String password) {
-        ContentValues values;
-        long resultado;
-        db = createDB.getWritableDatabase();
-        values = new ContentValues();
-        values.put(CreateDatabase.getUser(), user);
-        values.put(CreateDatabase.getPassword(), password);
-        resultado = db.insert(CreateDatabase.getTable(), null, values);
-        db.close();
-        if (resultado == -1)
-            return "Erro ao inserir registro";
-        else
-            return "Registro Inserido com sucesso";
-    }
-
-    public Cursor loadData() {
-        Cursor cursor;
-        String[] fields = {CreateDatabase.getID(), CreateDatabase.getUser(), CreateDatabase.getPassword()};
-        db = createDB.getReadableDatabase();
-        cursor = db.query(CreateDatabase.getTable(), fields, null, null, null, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-        }
-        db.close();
-        return cursor;
-    }
-
-    public Boolean verifyUserCredentials(String user, String password) {
-        Cursor cursor;
-        try {
-            String sql = "SELECT * FROM USER WHERE User = '" + user + "' and password = '" + password + "'";
-            db = createDB.getReadableDatabase();
-            cursor = db.rawQuery(sql, null);
-            if (cursor != null) {
-                final UserModel userModel = new UserModel();
-                cursor.moveToFirst();
-                userModel.setUser(cursor.getString(1).toString());
-                userModel.setPassword(cursor.getString(2).toString());
-                db.close();
-                return true;
-            } else {
-                return false;
-            }
-        } catch (Exception ex) {
-            return false;
-        }
-    }
-
     /**
      * Customer methods
      */
@@ -94,25 +36,44 @@ public class DBController {
         result = db.insert("CUSTOMER", null, values);
         db.close();
         if (result == -1)
-            return "Erro ao inserir registro";
+            return "Erro ao inserir novo leitor";
         else
-            return "Registro Inserido com sucesso";
+            return "Leitor Inserido com sucesso";
     }
 
-    public void updatedCustomer(CustomerModel customer) {
+    public String updatedCustomer(CustomerModel customer, String id) {
+        long result;
+        ContentValues values;
+        db = createDB.getWritableDatabase();
+        values = new ContentValues();
+        values.put("NAME", customer.getName());
+        values.put("EMAIL", customer.getEmail());
+        values.put("CPF", customer.getCpf());
+        values.put("ADDRESS", customer.getAddress());
+        values.put("BIRTHDAY", customer.getAddress());
+        values.put("CELLPHONE", customer.getBirthday());
+        values.put("CODE", customer.getCode());
+
+        result = db.update("CUSTOMER", values, "ID = ?", new String[]{id});
+        db.close();
+
+        if (result == -1)
+            return "Erro ao atualizar leitor";
+        else
+            return "Leitaor atualizado com sucesso";
+    }
+
+    public  String deleteCustomerById(String id){
         long result;
         db = createDB.getWritableDatabase();
-        String sql = "UPDATE CUSTOMER ("
-                + customer.getName() + ","
-                + customer.getEmail() + ","
-                + customer.getCpf() + ","
-                + customer.getCellphone() + ","
-                + customer.getAddress() + ","
-                + customer.getBirthday() + ","
-                + customer.getCode() + ")"
-                + "WHERE ID = " + customer.getId() + ";";
-        db.execSQL(sql);
+
+        result = db.delete("CUSTOMER", "ID = ?", new String[]{id});
         db.close();
+
+        if (result == -1)
+            return "Erro ao apagar leitor";
+        else
+            return "Leitaor apagado com sucesso";
     }
 
     public List<CustomerModel> findAllCustomer() {

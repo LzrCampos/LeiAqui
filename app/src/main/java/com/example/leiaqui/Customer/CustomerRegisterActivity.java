@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.leiaqui.DBController;
+import com.example.leiaqui.DAO.CustomerDAO;
 import com.example.leiaqui.Models.CustomerModel;
 import com.example.leiaqui.R;
 
@@ -24,7 +23,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         btnNewCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBController dbController = new DBController(getBaseContext());
+                CustomerDAO customerDAO = new CustomerDAO(getBaseContext());
                 CustomerModel customer = new CustomerModel();
 
                 EditText etName = (EditText)findViewById(R.id.etName);
@@ -43,9 +42,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
                 customer.setBirthday(etBirthday.getText().toString());
                 customer.setCode(Integer.parseInt(etCode.getText().toString()));
 
-                dbController.updatedCustomer(customer);
-                Toast.makeText(getApplicationContext(), "Cliente atualizado com sucesso", Toast.LENGTH_LONG).show();
-
+                customerDAO.insertCustomer(customer);
                 finish();
             }
         });

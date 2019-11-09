@@ -7,147 +7,169 @@
     android:paddingTop="15dp"
     android:paddingStart="15dp"
     android:paddingEnd="15dp"
-    tools:context=".Customer.CustomerUpdatedActivity">
+    tools:context=".Book.BookResgisterActivity">
 
     <TextView
-        android:id="@+id/tvUpdateName"
+        android:id="@+id/tvISBN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome"
+        android:text="ISBN"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etUpdateName"
+        android:id="@+id/etISBN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvISBN" />
 
     <TextView
-        android:id="@+id/tvUpdateEmail"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Titulo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateName" />
+        app:layout_constraintTop_toBottomOf="@+id/etISBN" />
 
     <EditText
-        android:id="@+id/etUpdateEmail"
+        android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <TextView
-        android:id="@+id/tvUpdateCpf"
+        android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CPF"
+        android:text="Categoria"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
 
     <EditText
-        android:id="@+id/etUpdateCpf"
+        android:id="@+id/etCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
     <TextView
-        android:id="@+id/tvUpdateCellphone"
+        android:id="@+id/tvAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celular"
+        android:text="Autor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/etCategory" />
 
     <EditText
-        android:id="@+id/etUpdateCellphone"
+        android:id="@+id/etAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCellphone" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
 
     <TextView
-        android:id="@+id/tvUpdateAddress"
+        android:id="@+id/tvKeyphrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Endereço"
+        android:text="Palavra-chave"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateCellphone" />
+        app:layout_constraintTop_toBottomOf="@+id/etAuthor" />
 
     <EditText
-        android:id="@+id/etUpdateAddress"
+        android:id="@+id/etKeyphrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/tvKeyphrase" />
 
     <TextView
-        android:id="@+id/tvUpdateBirthday"
+        android:id="@+id/tvPdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nascimento"
+        android:text="Data de publicação"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/etKeyphrase" />
 
     <EditText
-        android:id="@+id/etUpdateBirthday"
+        android:id="@+id/etPdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateBirthday" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPdate" />
 
     <TextView
-        android:id="@+id/tvUpdateCode"
+        android:id="@+id/tvEdition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Categoria de leitor"
+        android:text="Editora"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateBirthday" />
+        app:layout_constraintTop_toBottomOf="@+id/etPdate" />
 
     <EditText
-        android:id="@+id/etUpdateCode"
+        android:id="@+id/etEdition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateCode" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEdition" />
+
+    <TextView
+        android:id="@+id/tvPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicadora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEdition" />
+
+    <EditText
+        android:id="@+id/etPublisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher" />
+
+    <TextView
+        android:id="@+id/tvNpages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de paginas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPublisher" />
+
+    <EditText
+        android:id="@+id/etNpages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNpages" />
 
     <Button
-        android:id="@+id/btnUpdatedCustomer"
+        android:id="@+id/btnRegisterBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:layout_marginBottom="15dp"
-        android:text="Atualizar"
+        android:text="Cadastrar"
         android:textColor="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnDeleteCustomer"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnDeleteCustomer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F00"
-        android:layout_marginBottom="15dp"
-        android:text="Deletar"
-        android:textColor="#FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

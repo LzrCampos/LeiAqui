@@ -4,44 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="4"
-    android:layout_gravity="center"
+    android:padding="0.1in"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnCustomer"
-        android:layout_width="1in"
-        android:layout_height="1in"
-        android:layout_marginStart="24dp"
-        android:text="Cliente"
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="0.4in"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="8"
+        android:textSize="0.12in"
+        android:text="Buscar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="0.4in"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="8"
+        android:textSize="0.12in"
+        android:layout_marginTop="15dp"
+        android:text="Cliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 
     <Button
         android:id="@+id/btnReaderTypes"
-        android:layout_width="1in"
-        android:layout_height="1in"
+        android:layout_width="match_parent"
+        android:layout_height="0.4in"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="8"
+        android:textSize="0.12in"
+        android:layout_marginTop="15dp"
         android:text="Categoria de Leitores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCustomer"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomer"/>
 
     <Button
         android:id="@+id/btnBookType"
-        android:layout_width="1in"
-        android:layout_height="1in"
-        android:layout_marginStart="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.4in"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="8"
+        android:textSize="0.12in"
+        android:layout_marginTop="15dp"
         android:text="Categoria de livros"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnReaderTypes" />
 
     <Button
         android:id="@+id/btnBook"
-        android:layout_width="1in"
-        android:layout_height="1in"
+        android:layout_width="match_parent"
+        android:layout_height="0.4in"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="8"
+        android:textSize="0.12in"
+        android:layout_marginTop="15dp"
         android:text="Livros"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBookType"
-        app:layout_constraintTop_toBottomOf="@+id/btnReaderTypes" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBookType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
