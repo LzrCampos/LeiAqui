@@ -81,7 +81,7 @@ public class DBController {
      */
     public String insertCustomer(CustomerModel customer) {
         ContentValues values;
-        long resultado;
+        long result;
         db = createDB.getWritableDatabase();
         values = new ContentValues();
         values.put("NAME", customer.getName());
@@ -91,12 +91,28 @@ public class DBController {
         values.put("BIRTHDAY", customer.getAddress());
         values.put("CELLPHONE", customer.getBirthday());
         values.put("CODE", customer.getCode());
-        resultado = db.insert("CUSTOMER", null, values);
+        result = db.insert("CUSTOMER", null, values);
         db.close();
-        if (resultado == -1)
+        if (result == -1)
             return "Erro ao inserir registro";
         else
             return "Registro Inserido com sucesso";
+    }
+
+    public void updatedCustomer(CustomerModel customer) {
+        long result;
+        db = createDB.getWritableDatabase();
+        String sql = "UPDATE CUSTOMER ("
+                + customer.getName() + ","
+                + customer.getEmail() + ","
+                + customer.getCpf() + ","
+                + customer.getCellphone() + ","
+                + customer.getAddress() + ","
+                + customer.getBirthday() + ","
+                + customer.getCode() + ")"
+                + "WHERE ID = " + customer.getId() + ";";
+        db.execSQL(sql);
+        db.close();
     }
 
     public List<CustomerModel> findAllCustomer() {

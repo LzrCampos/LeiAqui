@@ -43,12 +43,10 @@ public class CustomerRegisterActivity extends AppCompatActivity {
                 customer.setBirthday(etBirthday.getText().toString());
                 customer.setCode(Integer.parseInt(etCode.getText().toString()));
 
-                String result;
-                result = dbController.insertCustomer(customer);
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                dbController.updatedCustomer(customer);
+                Toast.makeText(getApplicationContext(), "Cliente atualizado com sucesso", Toast.LENGTH_LONG).show();
 
                 finish();
-
             }
         });
     }

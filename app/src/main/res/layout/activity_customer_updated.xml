@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
     tools:context=".Customer.CustomerUpdatedActivity">
 
     <TextView
@@ -124,4 +127,27 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvUpdateCode" />
+
+    <Button
+        android:id="@+id/btnUpdatedCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:layout_marginTop="15dp"
+        android:text="Atualizar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateCode"/>
+
+    <Button
+        android:id="@+id/btnDeleteCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F00"
+        android:textColor="#FFF"
+        android:layout_marginTop="15dp"
+        android:text="Deletar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdatedCustomer"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

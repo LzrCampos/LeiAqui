@@ -53,6 +53,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
 
         db.execSQL(sql);
     }
+
     public void createTableCustomer(SQLiteDatabase db) {
         String sql = "create table CUSTOMER (ID integer primary key autoincrement, NAME TEXT, EMAIL TEXT, CPF TEXT, ADDRESS TEXT, CELLPHONE TEXT, BIRTHDAY TEXT, CODE INTEGER)";
 
